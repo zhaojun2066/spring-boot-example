@@ -14,6 +14,8 @@
         <module>example-006</module>
         <module>example-007</module>
         <module>example-008</module>
+        <module>example-009</module>
+        <module>example-010</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -45,11 +47,11 @@
             <version>${lombok.version}</version>
             <scope>provided</scope>
         </dependency>
-        <dependency>
+      <!--  <dependency>
             <groupId>org.bgee.log4jdbc-log4j2</groupId>
             <artifactId>log4jdbc-log4j2-jdbc4.1</artifactId>
             <version>${log4jdbc.log4j2.version}</version>
-        </dependency>
+        </dependency>-->
 
         <dependency>
             <groupId>org.springframework.boot</groupId>

@@ -68,7 +68,22 @@
     注意： 命令行的优先级最高
     在application.propterties中增加加激活的配置文件：spring.profiles.include=pre
     通过代码：SpringApplication 中的 setAdditionalProfiles() 方法。
+### 009
+    spring-boot-starter 默认是 使用 Logback 进行日志记录，当然你可以使用其他日志框架使用SLF4J 
+    日志级别：Logback 没有 FATAL 【打印严重错误，会导致程序退出】 级别。该级别映射到 ERROR 
+              ERROR 打印错误日志，但是不会影响程序继续运行
+              WARN 警告信息，潜在的问题信息，在生产日志中，作为给程序员的一种提醒而使用
+              INFO 粗粒度级别上突出强调应用程序的运行过程
+              DEBUG 开发过程中打印一些运行信息
+              TRACE  较低的日志级别，通常不会被使用  
+    日志组：logging.group.tomcat=org.apache.catalina, org.apache.coyote, org.apache.tomcat
+            logging.level.tomcat=TRACE 
+            Spring Boot 包含以下预定义的日志记录组，可以直接使用：
+            logging.level.web【org.springframework.core.codec、org.springframework.http、org.springframework.web】
+            logging.level.sql	【org.springframework.jdbc.core、org.hibernate.SQL】
     
-    
-    
+### example-010
+    spring mvc,springboot 能够为spring mvc 提供自动化配置
+    这里只是提供一个mvc的demo，包含接受get参数，json body ，restful 接口 ，都是返回json，更多事例参考相关spring mvc的文档事例。
+      
          
