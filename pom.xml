@@ -16,6 +16,7 @@
         <module>example-008</module>
         <module>example-009</module>
         <module>example-010</module>
+        <module>example-011</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -29,7 +30,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <start-class>com.jufeng.springboot.com.jufeng.springboot.example006.App</start-class>
+        <start-class>com.jufeng.springboot.com.jufeng.springboot.example006.com.jufeng.springboot.example011.App</start-class>
         <java.version>1.8</java.version>
         <lombok.version>1.14.8</lombok.version>
         <log4jdbc.log4j2.version>1.16</log4jdbc.log4j2.version>
@@ -46,6 +47,11 @@
             <artifactId>lombok</artifactId>
             <version>${lombok.version}</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.47</version>
         </dependency>
       <!--  <dependency>
             <groupId>org.bgee.log4jdbc-log4j2</groupId>

@@ -86,4 +86,8 @@
     spring mvc,springboot 能够为spring mvc 提供自动化配置
     这里只是提供一个mvc的demo，包含接受get参数，json body ，restful 接口 ，都是返回json，更多事例参考相关spring mvc的文档事例。
       
-         
+### example-011
+    HttpMessageConverters
+    HttpMessageConverter 接口是用来来转换 HTTP 的请求和响应，默认是jackson 来处理请求和响应json，字符串默认是utf-8。
+    自定义转换器 , 可以实现HttpMessageConverter 接口 或者继承 AbstractHttpMessageConverter 抽象类
+    自定义转化器案例： MyHttpMessageConverter，MyConfiguration  会覆盖默认的  HttpMessageConverters  
