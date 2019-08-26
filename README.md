@@ -12,7 +12,6 @@
     ${application.title} 应用的标题
     MANIFEST.MF 在打包的时候生成
     颜色具体参考：org.springframework.boot.ansi.AnsiColor
- 
  ### example-003
     事件监听
     注意：同一个事件注册多个监听器的时候，handler 发生是无序的
@@ -29,11 +28,9 @@
     获取访问应用程序参数： 如 java -jar xx.jar  --debug  file=100 hello
 ### example-005
     CommandLineRunner ApplicationRunner 可以在spring 启动的时候 运行一些代码，或者bean 实例化和注入完成后运行一段代码              
-    
 ### example-006
     监听spring 退出的钩子
     所有标准的 Spring 生命周期回调（比如 DisposableBean 接口，或者 @PreDestroy 注解）都可以使用。   
- 
 ### example-007
     Spring Boot 使用了一个非常特别的 PropertySource 指令，用于智能覆盖默认值。属性将按照以下顺序处理：
     在您的主目录（当 devtools 被激活，则为 ~/.spring-boot-devtools.properties ）中的 Devtools 全局设置属性。
@@ -81,11 +78,9 @@
             Spring Boot 包含以下预定义的日志记录组，可以直接使用：
             logging.level.web【org.springframework.core.codec、org.springframework.http、org.springframework.web】
             logging.level.sql	【org.springframework.jdbc.core、org.hibernate.SQL】
-    
 ### example-010
     spring mvc,springboot 能够为spring mvc 提供自动化配置
     这里只是提供一个mvc的demo，包含接受get参数，json body ，restful 接口 ，都是返回json，更多事例参考相关spring mvc的文档事例。
-      
 ### example-011
     HttpMessageConverters
     HttpMessageConverter 接口是用来来转换 HTTP 的请求和响应，默认是jackson 来处理请求和响应json，字符串默认是utf-8。
@@ -99,13 +94,13 @@
     使用 @Component 注解标记，因此组件扫描（component-scanning）规则将对其生效
 ### example-013
     统一异常处理  ErrorController
- 
 ### example-014
     统一异常处理 ,处理自定义异常 RestControllerAdvice or ControllerAdvice  ,最后统一返回json格式的错误信息  
 ### example-015
     自定义错误页面，自动处理和错误code 相关的页面展示信息.  会自动寻找/public/error/404.html 或者 xxx.html  
-
 ### example-016
     跨域支持
 ### example-017
     统一返回体 response 拦截   @ControllerAdvice  ResponseBodyAdvice
+### example-018
+    异步线程池的设置和异步请求
