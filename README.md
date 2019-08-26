@@ -91,3 +91,9 @@
     HttpMessageConverter 接口是用来来转换 HTTP 的请求和响应，默认是jackson 来处理请求和响应json，字符串默认是utf-8。
     自定义转换器 , 可以实现HttpMessageConverter 接口 或者继承 AbstractHttpMessageConverter 抽象类
     自定义转化器案例： MyHttpMessageConverter，MyConfiguration  会覆盖默认的  HttpMessageConverters  
+### example-012
+    自定义 JSON Serializer 和 Deserializer
+    使用 Jackson 序列化和反序列化 JSON 数据，可能需要自己编写 JsonSerializer 和 JsonDeserializer 类
+    或者使用spring-boot 提供的@JsonComponent 注解
+    ApplicationContext 中所有的 @JsonComponent bean 将被自动注册到 Jackson 中，由于 @JsonComponent 
+    使用 @Component 注解标记，因此组件扫描（component-scanning）规则将对其生效
