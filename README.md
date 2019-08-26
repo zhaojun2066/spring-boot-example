@@ -97,3 +97,6 @@
     或者使用spring-boot 提供的@JsonComponent 注解
     ApplicationContext 中所有的 @JsonComponent bean 将被自动注册到 Jackson 中，由于 @JsonComponent 
     使用 @Component 注解标记，因此组件扫描（component-scanning）规则将对其生效
+### example-013
+    统一异常处理  ErrorController
+    
