@@ -99,4 +99,6 @@
     使用 @Component 注解标记，因此组件扫描（component-scanning）规则将对其生效
 ### example-013
     统一异常处理  ErrorController
-    
+ 
+### example-014
+    统一异常处理 ,处理自定义异常 RestControllerAdvice or ControllerAdvice    

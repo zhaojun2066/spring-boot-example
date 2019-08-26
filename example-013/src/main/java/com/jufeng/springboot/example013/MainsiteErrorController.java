@@ -6,8 +6,6 @@ import org.springframework.boot.web.servlet.error.ErrorController;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.context.request.RequestAttributes;
-import org.springframework.web.context.request.ServletRequestAttributes;
 import org.springframework.web.context.request.ServletWebRequest;
 
 import javax.servlet.http.HttpServletRequest;
@@ -31,7 +29,6 @@ public class MainsiteErrorController implements ErrorController {
      */
     @RequestMapping(value = "/error",  produces = {MediaType.APPLICATION_JSON_VALUE})
     public ResponseMessage error(HttpServletRequest request) {
-        RequestAttributes requestAttributes = new ServletRequestAttributes(request);
         Map<String, Object> body = this.errorAttributes.getErrorAttributes(new ServletWebRequest(request), true);
         return ResponseMessage.fail("服务器端异常！", body);
     }
