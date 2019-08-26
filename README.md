@@ -101,4 +101,6 @@
     统一异常处理  ErrorController
  
 ### example-014
-    统一异常处理 ,处理自定义异常 RestControllerAdvice or ControllerAdvice    
+    统一异常处理 ,处理自定义异常 RestControllerAdvice or ControllerAdvice  ,最后统一返回json格式的错误信息  
+### example-015
+    自定义错误页面，自动处理和错误code 相关的页面展示信息.  会自动寻找/public/error/404.html 或者 xxx.html  
