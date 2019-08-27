@@ -128,4 +128,10 @@
 ### example-026
     jpa 配置         
 ### example-027
-    连接redis cluster 配置    
+    连接redis cluster 配置
+    StringRedisTemplate与RedisTemplate
+    两者的关系是StringRedisTemplate继承RedisTemplate。    
+    StringRedisTemplate默认采用的是String的序列化策略，保存的key和value都是采用此策略序列化保存的。
+    RedisTemplate默认采用的是JDK的序列化策略，保存的key和value都是采用此策略序列化保存的
+### example-027
+    连接redis cluster 配置,序列化和反序列化改为fastJson    
