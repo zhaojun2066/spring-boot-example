@@ -106,8 +106,11 @@
     异步线程池的设置和异步请求
 ### example-019
     servlet filter, filter 只是针对servlet 进行过滤，不会对spring controller进行过滤 
-    @WebFilter @WebServlet 实现
+    @WebFilter @WebServlet 实现,@ServletComponentScan 用于发现前面的两个annotation
     @Order 在 @WebFilter 上的类不起作用
+    @ServletComponentScan 在独立（standalone）容器中不起作用，因容器将使用内置发现机制来代替。
 ### example-020
     servlet filter, filter 只是针对servlet 进行过滤，不会对spring controller进行过滤 
     ServletRegistrationBean FilterRegistrationBean 实现
+### example-021
+    tomcat 配置 ，详见reade
