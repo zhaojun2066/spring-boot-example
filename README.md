@@ -125,3 +125,7 @@
     mvc 安全配置，简单用户名和密码    
 ### example-025
     jdbc 配置     
+### example-026
+    jpa 配置         
+### example-027
+    连接redis cluster 配置    
