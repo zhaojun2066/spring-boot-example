@@ -108,3 +108,6 @@
     servlet filter, filter 只是针对servlet 进行过滤，不会对spring controller进行过滤 
     @WebFilter @WebServlet 实现
     @Order 在 @WebFilter 上的类不起作用
+### example-020
+    servlet filter, filter 只是针对servlet 进行过滤，不会对spring controller进行过滤 
+    ServletRegistrationBean FilterRegistrationBean 实现
