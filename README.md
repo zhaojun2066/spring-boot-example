@@ -119,4 +119,6 @@
     注意：TomcatServletWebServerFactory、JettyServletWebServerFactory 和 UndertowServletWebServerFactory 
     是 ConfigurableServletWebServerFactory 的具体子类，它们分别为 Tomcat、Jetty 和 Undertow 提供了额外的自定义
     setter 方法
-   
+### example-023
+    tomcat 配置 ，直接注入bean ，TomcatServletWebServerFactory、JettyServletWebServerFactory 或 UndertowServletWebServerFactory
+    
