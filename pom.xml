@@ -30,6 +30,7 @@
         <module>example-022</module>
         <module>example-023</module>
         <module>example-024</module>
+        <module>example-025</module>
     </modules>
     <packaging>pom</packaging>
 
