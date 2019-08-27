@@ -114,3 +114,9 @@
     ServletRegistrationBean FilterRegistrationBean 实现
 ### example-021
     tomcat 配置 ，详见reade
+### example-022
+    tomcat 配置 ，代码方式WebServerFactoryCustomizer
+    注意：TomcatServletWebServerFactory、JettyServletWebServerFactory 和 UndertowServletWebServerFactory 
+    是 ConfigurableServletWebServerFactory 的具体子类，它们分别为 Tomcat、Jetty 和 Undertow 提供了额外的自定义
+    setter 方法
+   
