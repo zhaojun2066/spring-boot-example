@@ -121,4 +121,6 @@
     setter 方法
 ### example-023
     tomcat 配置 ，直接注入bean ，TomcatServletWebServerFactory、JettyServletWebServerFactory 或 UndertowServletWebServerFactory
-    
+
+### example-024
+    mvc 安全配置，简单用户名和密码    
