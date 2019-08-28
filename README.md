@@ -145,4 +145,5 @@
     RestTemplate方法的名称遵循命名约定，第一部分指出正在调用什么HTTP方法，第二部分指示返回的内容
     如： getForObject ，get方法 返回 具体的Object
          getForEntity, get 方法，返回原始Entity 
-       
+ ### example-030
+     send mail
