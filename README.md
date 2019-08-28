@@ -145,5 +145,26 @@
     RestTemplate方法的名称遵循命名约定，第一部分指出正在调用什么HTTP方法，第二部分指示返回的内容
     如： getForObject ，get方法 返回 具体的Object
          getForEntity, get 方法，返回原始Entity 
- ### example-030
+### example-030
      send mail
+### example-031
+    任务执行
+    在上下文中没有 Executor bean 的情况下，Spring Boot 会自动配置一个有合理默认值的 ThreadPoolTask​​Executor，
+    它可以自动与异步任务执行（@EnableAsync）和 Spring MVC 异步请求处理相关联  
+    本次使用默认配置实现
+    Spring Boot线程调度有以下几个参数可以配置(2.1版本之后才有)：
+    spring.task.execution.pool.core-size # 核心线程数，默认为8
+    spring.task.execution.pool.queue-capacity # 队列容量，默认为无限大
+    spring.task.execution.pool.max-size # 最大线程数，默认为无限大
+    这三个参数的关系如下：
+    如果当前要执行的任务数超过core-size，则任务会放到队列里面等待执行，等核心线程中有任务执行完成之后，再取出队列中的任务进行调度执行。
+    如果等待队列已经满了，再收到新任务时，则核心线程会自动扩容，最大扩展到max-size。
+    spring.task.execution.pool.allow-core-thread-timeout # 是否允许回收空闲的线程，默认为true
+    spring.task.execution.pool.keep-alive # 空闲的线程可以保留多少秒，默认为60。如果超过这个时间没有任务调度，则线程会被回收
+    spring.task.execution.thread-name-prefix # 线程名前缀，默认为thread-
+### example-032
+    任务执行    
+    在上下文中没有 Executor bean 的情况下，Spring Boot 会自动配置一个有合理默认值的 ThreadPoolTask​​Executor，
+    它可以自动与异步任务执行（@EnableAsync）和 Spring MVC 异步请求处理相关联  
+    实现ThreadPoolTask​​Executor 可以覆盖默认的 @EnableAsync 使用的线程池
+    Spring MVC 的异步请求支持 需要 `AsyncTaskExecutor` 实现（名为 `applicationTaskExecutor`）
