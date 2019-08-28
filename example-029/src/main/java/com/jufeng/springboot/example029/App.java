@@ -8,6 +8,7 @@ import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.client.ClientHttpRequestFactory;
 import org.springframework.http.client.ClientHttpResponse;
+import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
 import org.springframework.http.client.SimpleClientHttpRequestFactory;
 import org.springframework.web.client.ResponseErrorHandler;
 import org.springframework.web.client.RestTemplate;
@@ -25,9 +26,11 @@ public class App implements CommandLineRunner {
 
     @Bean
     public RestTemplate initRestTemplate(RestTemplateBuilder restTemplateBuilder){
+        //HttpComponentsClientHttpRequestFactory
         return restTemplateBuilder
                 .setConnectTimeout(Duration.ofMillis(3000))
                 .setReadTimeout(Duration.ofMillis(4000))
+                .requestFactory(SimpleClientHttpRequestFactory.class)  // http 请求工厂
                 .errorHandler(new ResponseErrorHandler() {
                     @Override
                     public boolean hasError(ClientHttpResponse response) throws IOException {

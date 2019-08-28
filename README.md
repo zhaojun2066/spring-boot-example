@@ -140,6 +140,8 @@
     Spring Boot 不提供任何自动配置的 RestTemplate bean。但是，它会自动配置 RestTemplateBuilder，
     可在需要时创建 RestTemplate 实例。自动配置的 RestTemplateBuilder 确保将合适的 HttpMessageConverters
     应用于 RestTemplate 实例。 
+    RestTemplate默认依赖JDK提供http连接的能力（HttpURLConnection），如果有需要的话也可以通过setRequestFactory
+    方法替换为例如Apache HttpComponents、Netty或OkHttp等其它HTTP library。
     RestTemplate方法的名称遵循命名约定，第一部分指出正在调用什么HTTP方法，第二部分指示返回的内容
     如： getForObject ，get方法 返回 具体的Object
          getForEntity, get 方法，返回原始Entity 
