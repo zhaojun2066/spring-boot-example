@@ -35,6 +35,7 @@
         <module>example-027</module>
         <module>example-028</module>
         <module>example-029</module>
+        <module>example-030</module>
     </modules>
     <packaging>pom</packaging>
 
