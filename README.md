@@ -168,3 +168,4 @@
     它可以自动与异步任务执行（@EnableAsync）和 Spring MVC 异步请求处理相关联  
     实现ThreadPoolTask​​Executor 可以覆盖默认的 @EnableAsync 使用的线程池
     Spring MVC 的异步请求支持 需要 `AsyncTaskExecutor` 实现（名为 `applicationTaskExecutor`）
+    本次为 自定义 ThreadPoolTaskExecutor 的实现
