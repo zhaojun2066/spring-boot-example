@@ -37,7 +37,7 @@ public class PoolWebConfigurer {
         return taskExecutor;
     }
     @Bean
-    public WebMvcConfigurer corsConfigurer() {
+    public WebMvcConfigurer poolConfigurer() {
         return new WebMvcConfigurer() {
             @Override
             public void configureAsyncSupport(AsyncSupportConfigurer configurer) {
