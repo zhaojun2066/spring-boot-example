@@ -1,6 +1,7 @@
 package com.jufeng.springboot.example033;
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.boot.task.TaskExecutorBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.EnableAsync;
@@ -23,7 +24,8 @@ public class AsyncConf {
 
 
     @Bean(name = "asyncServiceExecutorA")
-    public ThreadPoolTaskExecutor asyncServiceExecutor() {
+    public ThreadPoolTaskExecutor asyncServiceExecutor(TaskExecutorBuilder  builder) {
+        // 可以使用 TaskExecutorBuilder 进行创匠，springboot 会为我们自动创建 TaskExecutorBuilder
         log.info("start asyncServiceExecutor");
         ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();
         //配置核心线程数
