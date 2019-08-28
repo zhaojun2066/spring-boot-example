@@ -199,4 +199,14 @@
      "0 15 10 ? * MON-FRI"    每个周一、周二、周三、周四、周五的10：15触发
 ### example-035   
      @Conditional 注解，和@Configuration @Bean 配合使用
-     实现 Condition 接口，根据条件决定创建哪个bean  
+     实现 Condition 接口，根据条件决定创建哪个bean 
+     
+     其他spring 自带的条件注解
+     @ConditionalOnClass 某个class位于类路径上，才会实例化一个Bean
+     @ConditionalOnMissingClass  某个class类路径上不存在的时候，才会实例化一个Bean
+     @ConditionalOnBean 仅仅在当前上下文中存在某个对象时，才会实例化一个Bean
+     @ConditionalOnMissingBean  仅仅在当前上下文中不存在某个对象时，才会实例化一个Bean
+### example-036   
+     @ConditionalOnBean  仅仅在当前上下文中存在某个对象时，才会实例化一个Bean
+     只有班级bean的情况下 ，才能创建学生的bean   
+     配置类中定义Bean，如果使用@ConditionalOnBean注解依赖的Bean是通过配置类触发解析的，则执行结果依赖配置类加载顺序  
