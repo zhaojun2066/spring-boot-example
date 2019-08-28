@@ -133,5 +133,14 @@
     两者的关系是StringRedisTemplate继承RedisTemplate。    
     StringRedisTemplate默认采用的是String的序列化策略，保存的key和value都是采用此策略序列化保存的。
     RedisTemplate默认采用的是JDK的序列化策略，保存的key和value都是采用此策略序列化保存的
-### example-027
+### example-028
     连接redis cluster 配置,序列化和反序列化改为fastJson    
+### example-029
+    RestTemplate 
+    Spring Boot 不提供任何自动配置的 RestTemplate bean。但是，它会自动配置 RestTemplateBuilder，
+    可在需要时创建 RestTemplate 实例。自动配置的 RestTemplateBuilder 确保将合适的 HttpMessageConverters
+    应用于 RestTemplate 实例。 
+    RestTemplate方法的名称遵循命名约定，第一部分指出正在调用什么HTTP方法，第二部分指示返回的内容
+    如： getForObject ，get方法 返回 具体的Object
+         getForEntity, get 方法，返回原始Entity 
+       
