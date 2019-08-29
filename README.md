@@ -216,6 +216,11 @@
      只有班级bean的情况下 ，才能创建学生的bean   
      配置类中定义Bean，如果使用@ConditionalOnBean注解依赖的Bean是通过配置类触发解析的，则执行结果依赖配置类加载顺序  
 ### example-037 
-     创建自己的自动化配置 starter，本例为一个汽车自动配置引擎的例子,spring.factories
+     创建自己的自动化配置 starter，本例为一个汽车自动配置引擎的例子,spring.factories方式
 ### example-038
     example-037 试验进行结果验证          
+### example-039
+     创建自己的自动化配置 starter，本例为一个汽车自动配置引擎的例子, ennable注解的方式
+     EnableCar ,加上这个注解就会启动Car的自动化配置和spring.factories 一样 
+### example-040
+    example-039 试验进行结果验证          
