@@ -224,3 +224,26 @@
      EnableCar ,加上这个注解就会启动Car的自动化配置和spring.factories 一样 
 ### example-040
     example-039 试验进行结果验证          
+### example-041
+    actuator
+    通过 Actuator 端点，你可以监控应用程序并与之交互。Spring Boot 包含许多内置端点，也允许你添加自己的端点。
+    例如，health 端点提供基本的应用程序健康信息      .
+    健康状况：http://localhost:8080/actuator/health
+    spring2.x之前默认情况下，Actuator 启用除 shutdown 之外的所有端点。要配置端点的启用，请使用其 management.endpoint.<id>.enabled 属性
+    agement.endpoint.shutdown.enabled=true
+    如果你希望端点启用是选择性加入而不是选择性退出，请将 management.endpoints.enabled-by-default 属性设置为 false，
+    并使用各个端点的 enabled 属性重新加入。以下示例启用 info 端点并禁用所有其他端点：
+    management.endpoints.enabled-by-default=false
+    management.endpoint.info.enabled=true 
+    
+    注意的是 spring boot2.x中，默认只开放了info、health两个端点，
+    其余的需要自己通过配置management.endpoints.web.exposure.include属性来加载（有include自然就有exclude）。
+    如果想单独操作某个端点可以使用management.endpoint.端点.enabled属性进行启用或者禁用。
+    
+    http://localhost:8080/actuator 查看所有可以用的端点
+    参考文档：https://docs.spring.io/spring-boot/docs/2.1.3.RELEASE/actuator-api//html/
+    
+    查看支持的监控指标list
+    http://localhost:8080/actuator/metrics/
+    查看某个指标的值
+    http://localhost:8080/actuator/metrics/jvm.memory.committed
