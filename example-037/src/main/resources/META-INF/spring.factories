@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.jufeng.springboot.example037.CarAutoAutoConfiguration

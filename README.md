@@ -206,7 +206,16 @@
      @ConditionalOnMissingClass  某个class类路径上不存在的时候，才会实例化一个Bean
      @ConditionalOnBean 仅仅在当前上下文中存在某个对象时，才会实例化一个Bean
      @ConditionalOnMissingBean  仅仅在当前上下文中不存在某个对象时，才会实例化一个Bean
+     @ConditionalOnProperty 注解允许基于 Spring Environment 属性包含配置。使用 prefix 和 name 属性指定需要检查的属性
+     @ConditionalOnResource 注解仅允许在存在特定资源时包含配置
+     @ConditionalOnWebApplication当前是web环境
+     @ConditionalOnNotWebApplication	当前不是web环境
+     @ConditionalOnExpression 注解允许根据 SpEL 表达式的结果包含配置
 ### example-036   
      @ConditionalOnBean  仅仅在当前上下文中存在某个对象时，才会实例化一个Bean
      只有班级bean的情况下 ，才能创建学生的bean   
      配置类中定义Bean，如果使用@ConditionalOnBean注解依赖的Bean是通过配置类触发解析的，则执行结果依赖配置类加载顺序  
+### example-037 
+     创建自己的自动化配置 starter，本例为一个汽车自动配置引擎的例子,spring.factories
+### example-038
+    example-037 试验进行结果验证          
