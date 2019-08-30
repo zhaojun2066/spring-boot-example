@@ -264,3 +264,11 @@
     http://localhost:8080/actuator/metrics/
     查看某个指标的值
     http://localhost:8080/actuator/metrics/jvm.memory.committed
+    
+    
+### example-042    
+    SpringBoot页面展示Thymeleaf
+    Spring Boot默认存放模板页面的路径在src/main/resources/templates或者src/main/view/templates，这个无论是使用什么模板语言都一样，
+    当然默认路径是可以自定义的，不过一般不推荐这样做。另外Thymeleaf默认的页面文件后缀是.html
+    <html xmlns:th="http://www.thymeleaf.org"> 引用 th 标签
+    thymeleaf 语法：https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html#using-texts
