@@ -141,7 +141,7 @@
 ### example-024
     mvc 安全配置，简单用户名和密码    
 ### example-025
-    jdbc 配置     
+    jdbc 配置 ，默认走 HikariPool  连接池 
 ### example-026
     jpa 配置         
 ### example-027
