@@ -78,6 +78,23 @@
             Spring Boot 包含以下预定义的日志记录组，可以直接使用：
             logging.level.web【org.springframework.core.codec、org.springframework.http、org.springframework.web】
             logging.level.sql	【org.springframework.jdbc.core、org.hibernate.SQL】
+    ---------------------------
+    Spring Boot 默认提供配置的形式非常简单，只适合简单的日志应用，虽然说日志输出格式可以自定义，
+    但日志文件如何按天滚动等其他更复杂的策略却不能配置，只能通过自定义引用日志文件的形式。
+    Spring Boot 定制日志文件:
+    简单的日志配置不能满足实际项目需求，那可以通过引用定制日志文件的形式达到目的。Spring Boot能根据类路径下的
+    类库和配置文件自动配置对应的日志框架。
+    
+    日志框架	              配置文件
+    Logback	                  logback-spring.xml, logback-spring.groovy, logback.xml, or logback.groovy
+    Log4j2	                  log4j2-spring.xml or log4j2.xml
+    JDK (Java Util Logging）  logging.properties
+    
+    按对应类库在 classpath 下创建对应支持的日志配置文件就行，或者通过配置 logging.config 指定。
+    既然默认是支持 Logback 的，那现在只要在资源根目录下创建一个 logback-spring.xml 文件即可。xx-spring 这是 Spring Boot 
+    推荐的命名方式，否则 Spring Boot 不能完全控制日志初始化，因为默认命名配置文件 logback.xml 加载较早不能获取到 application.properties 
+    中的配置信息
+            
 ### example-010
     spring mvc,springboot 能够为spring mvc 提供自动化配置
     这里只是提供一个mvc的demo，包含接受get参数，json body ，restful 接口 ，都是返回json，更多事例参考相关spring mvc的文档事例。
