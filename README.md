@@ -276,3 +276,9 @@
     mvc 参数验证  + @RestControllerAdvice 统一返回异常结果
 ### example-044
     JdbcTemplate 多数据源静态
+    事物使用:oneransactionManager,tworansactionManager 创建bean的方法名字
+    @Transactional(value = "tworansactionManager",readOnly=true)
+    public void doLoad(Serializable rowId){}
+    
+    @Transactional(value = "oneransactionManager")
+    public int doUpdate(String v){}

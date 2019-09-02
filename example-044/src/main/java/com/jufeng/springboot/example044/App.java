@@ -40,21 +40,5 @@ public class App implements CommandLineRunner {
         System.out.println(list);
         List list2 =  twoJdbcTemplate.queryForList("select * from litemall_ad");
         System.out.println(list2);
-        twoJdbcTemplate.queryForList("select * from litemall_ad");
-        twoJdbcTemplate.queryForList("select * from litemall_ad");
-        twoJdbcTemplate.queryForList("select * from litemall_ad");
-        twoJdbcTemplate.queryForList("select * from litemall_ad");
-        twoJdbcTemplate.queryForList("select * from litemall_ad");
-        twoJdbcTemplate.queryForList("select * from litemall_ad");
-        twoJdbcTemplate.queryForList("select * from litemall_ad");
-        twoJdbcTemplate.queryForList("select * from litemall_ad");
-        twoJdbcTemplate.queryForList("select * from litemall_ad");
-        twoJdbcTemplate.queryForList("select * from litemall_ad");
-        twoJdbcTemplate.queryForList("select * from litemall_ad");
-        twoJdbcTemplate.queryForList("select * from litemall_ad");
-        twoJdbcTemplate.queryForList("select * from litemall_ad");
-        twoJdbcTemplate.queryForList("select * from litemall_ad");
-        twoJdbcTemplate.queryForList("select * from litemall_ad");
-        twoJdbcTemplate.queryForList("select * from litemall_ad");
     }
 }
