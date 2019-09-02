@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 import javax.validation.ConstraintViolation;
 import javax.validation.ConstraintViolationException;
+import java.util.concurrent.Executors;
 import java.util.stream.Collectors;
 
 /**
@@ -31,8 +32,8 @@ public class GlobalExceptionHandler {
     @ExceptionHandler({ConstraintViolationException.class,
             MethodArgumentNotValidException.class,
             ServletRequestBindingException.class,
-            BindException.class,
-            HttpMessageNotReadableException.class})
+            BindException.class }/*,
+            HttpMessageNotReadableException.class}*/)
     @ResponseStatus(value = HttpStatus.OK)
     public Result<?> handleValidationException(Exception e) {
         String msg = "";
@@ -53,10 +54,10 @@ public class GlobalExceptionHandler {
         } else if (e instanceof MissingPathVariableException) {
             MissingPathVariableException t = (MissingPathVariableException) e;
             msg = t.getVariableName() + " 不能为空";
-        }else if (e instanceof HttpMessageNotReadableException) {
+        }/*else if (e instanceof HttpMessageNotReadableException) {
             HttpMessageNotReadableException t = (HttpMessageNotReadableException) e;
             msg =  t.getMessage();
-        } else {
+        } */else {
             msg = "必填参数缺失";
         }
         log.warn("参数校验不通过,msg: {}", msg);
@@ -70,5 +71,17 @@ public class GlobalExceptionHandler {
         return result.getAllErrors().stream()
                 .map(DefaultMessageSourceResolvable::getDefaultMessage)
                 .collect(Collectors.joining(","));
+    }
+
+
+    /**
+     * 统一处理业务异常
+     */
+    @ExceptionHandler(Exception.class)
+    public Result<?> handleBusinessException(Exception t) {
+        Result result = new Result();
+        result.setCode("0001");
+        result.setMsg(t.getMessage());
+        return result;
     }
 }
