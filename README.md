@@ -275,4 +275,4 @@
 ### example-043
     mvc 参数验证  + @RestControllerAdvice 统一返回异常结果
 ### example-044
-   多数据源静态
+    JdbcTemplate 多数据源静态
