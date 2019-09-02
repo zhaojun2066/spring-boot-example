@@ -274,3 +274,5 @@
     thymeleaf 语法：https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html#using-texts
 ### example-043
     mvc 参数验证  + @RestControllerAdvice 统一返回异常结果
+### example-044
+   多数据源静态
