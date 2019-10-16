@@ -50,6 +50,7 @@
         <module>example-042</module>
         <module>example-043</module>
         <module>example-044</module>
+        <module>example-045</module>
     </modules>
     <packaging>pom</packaging>
 

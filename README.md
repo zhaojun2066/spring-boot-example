@@ -282,3 +282,8 @@
     
     @Transactional(value = "oneransactionManager")
     public int doUpdate(String v){}
+### example-045
+    swagger2 demo
+    启动访问：
+    http://localhost:8888/swagger-ui.html 
+    
